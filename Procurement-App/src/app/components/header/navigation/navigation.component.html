@@ -1,0 +1,51 @@
+<mat-toolbar color="primary">
+  <a routerLink="/">
+    <img src="assets/THD-Logo.png" alt="Photo of a THD Logo">
+  </a>
+  <span class="spacer"></span>
+  <a href="javascript:void(0)" [matMenuTriggerFor]="langSwitch">
+    <mat-icon>language</mat-icon>
+  </a>
+  <mat-menu #langSwitch="matMenu">
+    <button mat-menu-item (click)="switchLang('de')">
+      <mat-icon>
+        <span class="flag-icon flag-icon-de flag-icon-squared"></span>
+      </mat-icon>
+      <span>DE</span>
+    </button>
+    <button mat-menu-item (click)="switchLang('en')">
+      <mat-icon>
+        <span class="flag-icon flag-icon-gb flag-icon-squared"></span>
+      </mat-icon>
+      <span>EN</span>
+    </button>
+  </mat-menu>
+  <a *ngIf="!loggedIn" routerLink="/login">
+    <mat-icon>login</mat-icon>
+  </a>
+  <a *ngIf="loggedIn" href="javascript:void(0)" [matMenuTriggerFor]="menu">
+    <mat-icon>person</mat-icon>
+  </a>
+  <mat-menu #menu="matMenu">
+    <a routerLink="/profile">
+      <button mat-menu-item>
+        <mat-icon>portrait</mat-icon>
+        <span>{{ 'PROFILE.MYPROFILE' | translate }}</span>
+      </button>
+    </a>
+    <a routerLink="/my-products">
+      <button mat-menu-item>
+        <mat-icon>inventory_2</mat-icon>
+        <span>{{ 'PROFILE.MYPRODUCTS' | translate }}</span>
+      </button>
+    </a>
+    <mat-divider></mat-divider>
+    <button (click)="logout()" mat-menu-item>
+      <mat-icon>logout</mat-icon>
+      <span>{{ 'PROFILE.LOGOUT' | translate }}</span>
+    </button>
+  </mat-menu>
+  <a routerLink="/shopping-cart">
+    <mat-icon>shopping_cart</mat-icon>
+  </a>
+</mat-toolbar>

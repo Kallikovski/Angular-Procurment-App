@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>{{dialogHeader}}</h2>
+<mat-dialog-content>
+    <form [formGroup]="productCreationForm">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>{{ 'PROFILEPRODUCTDIALOG.CREATE' | translate }}:</mat-label>
+            <textarea matInput type="text" formControlName="productname"></textarea>
+        </mat-form-field><br>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>{{ 'PROFILEPRODUCTDIALOG.PRICE' | translate }}:</mat-label>
+            <input matInput type="number" min="0" step=".01" formControlName="price">
+        </mat-form-field><br>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>{{ 'PROFILEPRODUCTDIALOG.DESCRIPTION' | translate }}:</mat-label>
+            <textarea matInput type="text" formControlName="description"></textarea>
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button *ngIf="!data" mat-button (click)="createProduct()">{{ 'PROFILEPRODUCTDIALOG.CREATE' | translate }}</button>
+    <button *ngIf="data" mat-button (click)="updateProduct()">{{ 'PROFILEPRODUCTDIALOG.UPDATE' | translate }}</button>
+    <button mat-button (click)="closeProductDialog()">{{ 'PROFILEPRODUCTDIALOG.CANCEL' | translate }}</button>
+</mat-dialog-actions>

@@ -1,0 +1,799 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Procurement App Frontend Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Procurement App Frontend Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  NavigationComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/header/navigation/navigation.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-navigation</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./navigation.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./navigation.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#loggedIn" >loggedIn</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#translate" >translate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cancelClick" >cancelClick</a>
+                            </li>
+                            <li>
+                                <a href="#logout" >logout</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#switchLang" >switchLang</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(translate: TranslateService, _auth: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, _chatService: <a href="../injectables/ChatService.html" target="_self">ChatService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/header/navigation/navigation.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor to set available languages and default language</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_auth</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_chatService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ChatService.html" target="_self" >ChatService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancelClick"></a>
+                    <span class="name">
+                        <span ><b>cancelClick</b></span>
+                        <a href="#cancelClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cancelClick(ev: MouseEvent)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/components/header/navigation/navigation.component.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ev</td>
+                                    <td>
+                                            <code>MouseEvent</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="logout"></a>
+                    <span class="name">
+                        <span ><b>logout</b></span>
+                        <a href="#logout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>logout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/components/header/navigation/navigation.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Logout user via authentication service</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/components/header/navigation/navigation.component.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="switchLang"></a>
+                    <span class="name">
+                        <span ><b>switchLang</b></span>
+                        <a href="#switchLang"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>switchLang(lang: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/components/header/navigation/navigation.component.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Switch language of the app</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>lang</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>new language to set</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loggedIn"></a>
+                    <span class="name">
+                        <span ><b>loggedIn</b></span>
+                        <a href="#loggedIn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/header/navigation/navigation.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="translate"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>translate</b></span>
+                        <a href="#translate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>TranslateService</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/header/navigation/navigation.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+import { AuthService } from &#x27;src/app/auth/auth.service&#x27;
+import { ChatService } from &#x27;src/app/chat/chat.service&#x27;;
+
+@Component({
+  selector: &#x27;app-navigation&#x27;,
+  templateUrl: &#x27;./navigation.component.html&#x27;,
+  styleUrls: [&#x27;./navigation.component.scss&#x27;]
+})
+
+export class NavigationComponent {
+
+  loggedIn &#x3D; false;
+
+  /** Constructor to set available languages and default language
+   * @param TranslateService
+   * @param AuthService 
+   */
+  constructor(public translate: TranslateService, private _auth: AuthService, private _chatService: ChatService) {
+    translate.addLangs([&#x27;en&#x27;, &#x27;de&#x27;]);
+    translate.setDefaultLang(&#x27;en&#x27;);
+    translate.use(&#x27;en&#x27;);
+    this._auth.getIsLoggedInObserver().subscribe((data: any) &#x3D;&gt; { this.loggedIn &#x3D; data })
+  }
+
+  ngOnInit(): void { }
+
+  /** Logout user via authentication service */
+  logout() {
+    console.log(&quot;LOGOUT&quot;)
+    this._auth.logoutUser().subscribe(
+      res &#x3D;&gt; {
+        this._chatService.disconnect()
+      },
+      err &#x3D;&gt; console.log(err)
+    )
+  }
+  cancelClick(ev: MouseEvent) {
+    ev.stopPropagation();
+  }
+  /** 
+   * Switch language of the app 
+   * @param lang new language to set
+  */
+  switchLang(lang: string) {
+    this.translate.use(lang);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-toolbar color&#x3D;&quot;primary&quot;&gt;
+  &lt;a routerLink&#x3D;&quot;/&quot;&gt;
+    &lt;img src&#x3D;&quot;assets/THD-Logo.png&quot; alt&#x3D;&quot;Photo of a THD Logo&quot;&gt;
+  &lt;/a&gt;
+  &lt;span class&#x3D;&quot;spacer&quot;&gt;&lt;/span&gt;
+  &lt;a href&#x3D;&quot;javascript:void(0)&quot; [matMenuTriggerFor]&#x3D;&quot;langSwitch&quot;&gt;
+    &lt;mat-icon&gt;language&lt;/mat-icon&gt;
+  &lt;/a&gt;
+  &lt;mat-menu #langSwitch&#x3D;&quot;matMenu&quot;&gt;
+    &lt;button mat-menu-item (click)&#x3D;&quot;switchLang(&#x27;de&#x27;)&quot;&gt;
+      &lt;mat-icon&gt;
+        &lt;span class&#x3D;&quot;flag-icon flag-icon-de flag-icon-squared&quot;&gt;&lt;/span&gt;
+      &lt;/mat-icon&gt;
+      &lt;span&gt;DE&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button mat-menu-item (click)&#x3D;&quot;switchLang(&#x27;en&#x27;)&quot;&gt;
+      &lt;mat-icon&gt;
+        &lt;span class&#x3D;&quot;flag-icon flag-icon-gb flag-icon-squared&quot;&gt;&lt;/span&gt;
+      &lt;/mat-icon&gt;
+      &lt;span&gt;EN&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/mat-menu&gt;
+  &lt;a *ngIf&#x3D;&quot;!loggedIn&quot; routerLink&#x3D;&quot;/login&quot;&gt;
+    &lt;mat-icon&gt;login&lt;/mat-icon&gt;
+  &lt;/a&gt;
+  &lt;a *ngIf&#x3D;&quot;loggedIn&quot; href&#x3D;&quot;javascript:void(0)&quot; [matMenuTriggerFor]&#x3D;&quot;menu&quot;&gt;
+    &lt;mat-icon&gt;person&lt;/mat-icon&gt;
+  &lt;/a&gt;
+  &lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
+    &lt;a routerLink&#x3D;&quot;/profile&quot;&gt;
+      &lt;button mat-menu-item&gt;
+        &lt;mat-icon&gt;portrait&lt;/mat-icon&gt;
+        &lt;span&gt;{{ &#x27;PROFILE.MYPROFILE&#x27; | translate }}&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/a&gt;
+    &lt;a routerLink&#x3D;&quot;/my-products&quot;&gt;
+      &lt;button mat-menu-item&gt;
+        &lt;mat-icon&gt;inventory_2&lt;/mat-icon&gt;
+        &lt;span&gt;{{ &#x27;PROFILE.MYPRODUCTS&#x27; | translate }}&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/a&gt;
+    &lt;mat-divider&gt;&lt;/mat-divider&gt;
+    &lt;button (click)&#x3D;&quot;logout()&quot; mat-menu-item&gt;
+      &lt;mat-icon&gt;logout&lt;/mat-icon&gt;
+      &lt;span&gt;{{ &#x27;PROFILE.LOGOUT&#x27; | translate }}&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/mat-menu&gt;
+  &lt;a routerLink&#x3D;&quot;/shopping-cart&quot;&gt;
+    &lt;mat-icon&gt;shopping_cart&lt;/mat-icon&gt;
+  &lt;/a&gt;
+&lt;/mat-toolbar&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./navigation.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mat-toolbar a, .mat-toolbar button {
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.hidden{
+  display: none;
+}
+
+img{
+  max-width: 280px;
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  img{
+    max-width: 180px;
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary">  <a routerLink="/">    <img src="assets/THD-Logo.png" alt="Photo of a THD Logo">  </a>  <span class="spacer"></span>  <a href="javascript:void(0)" [matMenuTriggerFor]="langSwitch">    <mat-icon>language</mat-icon>  </a>  <mat-menu #langSwitch="matMenu">    <button mat-menu-item (click)="switchLang(\'de\')">      <mat-icon>        <span class="flag-icon flag-icon-de flag-icon-squared"></span>      </mat-icon>      <span>DE</span>    </button>    <button mat-menu-item (click)="switchLang(\'en\')">      <mat-icon>        <span class="flag-icon flag-icon-gb flag-icon-squared"></span>      </mat-icon>      <span>EN</span>    </button>  </mat-menu>  <a *ngIf="!loggedIn" routerLink="/login">    <mat-icon>login</mat-icon>  </a>  <a *ngIf="loggedIn" href="javascript:void(0)" [matMenuTriggerFor]="menu">    <mat-icon>person</mat-icon>  </a>  <mat-menu #menu="matMenu">    <a routerLink="/profile">      <button mat-menu-item>        <mat-icon>portrait</mat-icon>        <span>{{ \'PROFILE.MYPROFILE\' | translate }}</span>      </button>    </a>    <a routerLink="/my-products">      <button mat-menu-item>        <mat-icon>inventory_2</mat-icon>        <span>{{ \'PROFILE.MYPRODUCTS\' | translate }}</span>      </button>    </a>    <mat-divider></mat-divider>    <button (click)="logout()" mat-menu-item>      <mat-icon>logout</mat-icon>      <span>{{ \'PROFILE.LOGOUT\' | translate }}</span>    </button>  </mat-menu>  <a routerLink="/shopping-cart">    <mat-icon>shopping_cart</mat-icon>  </a></mat-toolbar></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'DataPrivacyComponent', 'selector': 'app-data-privacy'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LegalNoticeComponent', 'selector': 'app-legal-notice'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ProductConfirmationDialogComponent', 'selector': 'app-product-confirmation-dialog'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'ProfileProductDialogComponent', 'selector': 'app-profile-product-dialog'},{'name': 'ProfileProductOverviewComponent', 'selector': 'app-profile-product-overview'},{'name': 'ShoppingCartComponent', 'selector': 'app-shopping-cart'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'NavigationComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NavigationComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

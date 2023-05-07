@@ -1,0 +1,29 @@
+mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+}
+mat-form-field {
+    display: block;
+}
+mat-radio-group{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+.radio-group{
+    text-align: left;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+@media only screen and (max-width: 600px) {
+    mat-card{
+      max-width: 280px;
+    }
+}

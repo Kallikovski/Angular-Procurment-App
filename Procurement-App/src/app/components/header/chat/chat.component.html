@@ -1,0 +1,20 @@
+<div class="chat-body">
+    <mat-sidenav-container class="example-container">
+        <mat-sidenav #sidenav mode="side" [(opened)]="opened" position="end">
+            <div class="inner-chat-body">
+                <div class="chat" [innerHTML]="chat"></div>
+                <div class="chat-input">
+                    <input matInput type="text" [(ngModel)]="message" placeholder="{{ 'CHAT.WRITEHERE' | translate
+                }}">
+                    <button mat-mini-fab (click)="submitMessage()">
+                        <mat-icon>send</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </mat-sidenav>
+        <mat-sidenav-content position="end">
+            <button matBadge="{{staffMembersOnline}}" matBadgeColor="warn" matBadgePosition="below before" mat-button
+                (click)="sidenav.toggle()" class="mat-accent">Chat</button>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

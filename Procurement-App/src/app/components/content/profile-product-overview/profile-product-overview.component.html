@@ -1,0 +1,216 @@
+<div class="container">
+  <div class="container-content">
+    <mat-card class="example-card">
+      <mat-tab-group mat-align-tabs="start">
+        <mat-tab *ngIf="userRole == 'Customer'" label="{{ 'PRODUCTCONFIRMATIONDIALOG.ORDEREDPRODUCTS' | translate }}">
+          <ul class="product-container">
+            <li class="product">
+              <mat-card class="product-card">
+                <mat-card-header>
+                  <span class="product-toolbar">
+                    <button mat-button [matMenuTriggerFor]="menuOrder">
+                      <mat-icon>sort</mat-icon>
+                    </button>
+                    <mat-menu #menuOrder="matMenu">
+                      <button mat-menu-item (click)="sort = 'createdAt:asc'; getOrders()">{{ 'FILTER.ORDERINGDATE' |
+                        translate }}</button>
+                      <button mat-menu-item (click)="sort = 'status:asc'; getOrders()">{{ 'FILTER.STATUS' | translate
+                        }}</button>
+                      <button mat-menu-item (click)="sort = 'price:asc'; getOrders()">{{ 'FILTER.PRICE' | translate
+                        }}</button>
+                    </mat-menu>
+                  </span>
+                </mat-card-header>
+              </mat-card>
+            </li>
+            <li *ngFor="let card of orderCards; let i = index" class="product">
+              <mat-card class="product-card">
+                <mat-card-header>
+                  <span>{{ 'PRODUCTS.ORDERINGDATE' | translate }}: {{card.createdAt}}</span><span>{{ 'PRODUCTS.STATUS' |
+                    translate }}: {{ card.status }}</span>
+                </mat-card-header>
+                <mat-divider></mat-divider>
+                <div class="product-card-content">
+                  <img class="mat-image"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAKlBMVEXg4OD////j4+Pb29v7+/vi4uLx8fHs7Oz39/f09PTa2tru7u7m5ubX19cF3ejnAAABRElEQVR4nO3Z27JDMBiAURFVVN//dXfp+ZC6Y0//tS4zphPflARVBQAAAAAAAAAAAAAAAAAAAAAAAADAj6i/23p6G+jSkn7rKa6tXUyS0mHrSa4rp9QuHNKlJq8yl//i1GS/cEgbtsm4Kx0StEme7ipd4ZCgTQ7zrbT7fOoxm+TL+vL58ondZLwPd/2tQ+wm99HTRu4WJWaTapyTtNdTz/Pe9holaJNcnxrsh+vYZbt/iRK0SVUdj8fnf8k9StgmDyMPD4VzlNBN5qU4Pz0nT1EiN2mmdSe/vDroQzdppsX4NUlKOXCT5ry9f3t3ErhJU3qfFLdJMUncJuUkYZvkchJNNJlo8u58P6l3JXXoPVtRxCZ9PX5Tx/u+4zvgu2H5e3E7LP/MbxmWLowhXBIAAAAAAAAAAAAAAAAAAAAAAAAAgF/1BxZSCIBLTls7AAAAAElFTkSuQmCC">
+                  <mat-card-content>
+                    <div class="mat-card-content-description">
+                      <ul class="product-info-listing">
+                        <li><span class="product-title">{{ 'PROFILEPRODUCTOVERVIEW.PRODUCTNAME' | translate
+                            }}:{{card.productname}}</span></li>
+                        <li><span class="price">{{ 'PRODUCTS.PRICE' | translate }}: {{card.price}}</span></li>
+                        <li><span class="price">{{ 'PROFILEPRODUCTOVERVIEW.ORDERCODE' | translate }}:
+                            {{card._id}}</span></li>
+                      </ul>
+                    </div>
+                  </mat-card-content>
+                </div>
+                <div class="product-card-content">
+                  <mat-card-content>
+                    <div class="mat-card-content-action">
+                      <ul class="product-action-listing">
+                        <li><button
+                            [disabled]="(card.signed==false || card.adminsigned==false || card.status == 'cancelled'|| card.status == 'shipped')"
+                            (click)="confirmOrder(card._id)" mat-raised-button color="primary" class="product-buy">
+                            {{ 'PROFILEPRODUCTOVERVIEW.FINISHORDER' | translate }}
+                          </button></li>
+                        <li><button [disabled]="(card.status == 'cancelled' || card.status == 'shipped')"
+                            (click)="cancelOrder(card._id)" mat-raised-button color="primary" class="product-buy">
+                            {{ 'PROFILEPRODUCTOVERVIEW.CANCELORDER' | translate }}
+                          </button></li>
+                      </ul>
+                      <ul class="product-info-listing">
+                        <li class="sign"><span>{{ 'PROFILEPRODUCTOVERVIEW.ADMINSIGNED' | translate }}
+                            <mat-icon class="done-icon" *ngIf="card.adminsigned==true">done</mat-icon>
+                            <mat-icon class="clear-icon" *ngIf="card.adminsigned!=true">clear</mat-icon>
+                          </span>
+                        </li>
+                        <li class="sign"><span>{{ 'PROFILEPRODUCTOVERVIEW.STAFFSIGNED' | translate }}
+                            <mat-icon class="done-icon" *ngIf="card.signed==true">done</mat-icon>
+                            <mat-icon class="clear-icon" *ngIf="card.signed!=true">clear</mat-icon>
+                          </span></li>
+                      </ul>
+                    </div>
+                  </mat-card-content>
+                </div>
+              </mat-card>
+            </li>
+          </ul>
+        </mat-tab>
+        <mat-tab *ngIf="userRole != 'Customer'" label="{{ 'PRODUCTCONFIRMATIONDIALOG.PRODUCTMANAGEMENT' | translate }}">
+          <ul class="product-container">
+            <li class="product">
+              <mat-card class="product-card">
+                <mat-card-header>
+                  <span class="product-toolbar">
+                    <button mat-button [matMenuTriggerFor]="menuManage">
+                      <mat-icon>sort</mat-icon>
+                    </button>
+                    <mat-menu #menuManage="matMenu">
+                      <button mat-menu-item (click)="sort = 'productname:asc'; getProducts()">{{
+                        'PROFILEPRODUCTOVERVIEW.PRODUCTNAME' |
+                        translate }}</button>
+                      <button mat-menu-item (click)="sort = 'createdAt:asc'; getProducts()">{{ 'PRODUCTS.CREATED' |
+                        translate }}</button>
+                      <button mat-menu-item (click)="sort = 'price:asc'; getProducts()">{{ 'PRODUCTS.PRICE' | translate
+                        }}</button>
+                    </mat-menu>
+                    <button *ngIf="userRole != 'Admin'" mat-button (click)="openProductCreation()" class="add">
+                      <mat-icon>add</mat-icon>
+                    </button>
+                  </span>
+                </mat-card-header>
+              </mat-card>
+            </li>
+            <li *ngFor="let card of productCards; let i = index" class="product">
+              <mat-card class="product-card">
+                <mat-card-header>
+                  <span>{{ 'PRODUCTS.CREATED' | translate }}: {{card.createdAt}}</span>
+                  <span class="product-actions">
+                    <button mat-button (click)="editProductCreation(card)" class="product-buy">
+                      <mat-icon>create</mat-icon>
+                    </button>
+                    <button mat-button (click)="deleteProduct(card._id)" class="product-buy">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+                  </span>
+                </mat-card-header>
+                <mat-divider></mat-divider>
+                <div class="product-card-content">
+                  <img class="mat-image"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAKlBMVEXg4OD////j4+Pb29v7+/vi4uLx8fHs7Oz39/f09PTa2tru7u7m5ubX19cF3ejnAAABRElEQVR4nO3Z27JDMBiAURFVVN//dXfp+ZC6Y0//tS4zphPflARVBQAAAAAAAAAAAAAAAAAAAAAAAADAj6i/23p6G+jSkn7rKa6tXUyS0mHrSa4rp9QuHNKlJq8yl//i1GS/cEgbtsm4Kx0StEme7ipd4ZCgTQ7zrbT7fOoxm+TL+vL58ondZLwPd/2tQ+wm99HTRu4WJWaTapyTtNdTz/Pe9holaJNcnxrsh+vYZbt/iRK0SVUdj8fnf8k9StgmDyMPD4VzlNBN5qU4Pz0nT1EiN2mmdSe/vDroQzdppsX4NUlKOXCT5ry9f3t3ErhJU3qfFLdJMUncJuUkYZvkchJNNJlo8u58P6l3JXXoPVtRxCZ9PX5Tx/u+4zvgu2H5e3E7LP/MbxmWLowhXBIAAAAAAAAAAAAAAAAAAAAAAAAAgF/1BxZSCIBLTls7AAAAAElFTkSuQmCC">
+                  <mat-card-content>
+                    <div class="mat-card-content-description management">
+                      <ul class="product-info-listing">
+                        <li><span class="product-title">{{ 'PROFILEPRODUCTOVERVIEW.PRODUCTNAME' | translate }}:
+                            {{card.productname}}</span></li>
+                        <li><span class="price">{{ 'PROFILEPRODUCTOVERVIEW.PRICE' | translate }}: {{card.price}}
+                            $</span></li>
+                        <li><span class="description">{{ 'PROFILEPRODUCTOVERVIEW.DESCRIPTION' | translate }}:
+                            {{card.description}}</span></li>
+                        <li><span class="description">{{ 'PROFILEPRODUCTOVERVIEW.LASTUPDATED' | translate }}:
+                            {{card.updatedAt}}</span></li>
+                      </ul>
+                    </div>
+                  </mat-card-content>
+                </div>
+              </mat-card>
+            </li>
+          </ul>
+        </mat-tab>
+        <mat-tab *ngIf="userRole != 'Customer'" label="{{ 'PRODUCTCONFIRMATIONDIALOG.ORDERMANAGEMENT' | translate }}">
+          <ul class="product-container">
+            <li class="product">
+              <mat-card class="product-card">
+                <mat-card-header>
+                  <span class="product-toolbar">
+                    <button mat-button [matMenuTriggerFor]="menuOrder">
+                      <mat-icon>sort</mat-icon>
+                    </button>
+                    <mat-menu #menuOrder="matMenu">
+                      <button mat-menu-item (click)="sort = 'createdAt:asc'; getOrders()">{{ 'FILTER.ORDERINGDATE' |
+                        translate }}</button>
+                      <button mat-menu-item (click)="sort = 'status:asc'; getOrders()">{{ 'FILTER.STATUS' | translate
+                        }}</button>
+                      <button mat-menu-item (click)="sort = 'price:asc'; getOrders()">{{ 'FILTER.PRICE' | translate
+                        }}</button>
+                    </mat-menu>
+                  </span>
+                </mat-card-header>
+              </mat-card>
+            </li>
+            <li *ngFor="let card of orderCards; let i = index" class="product">
+              <mat-card *ngIf="card.adminsigned == true " class="product-card">
+                <mat-card-header>
+                  <span>{{ 'PRODUCTS.ORDERINGDATE' | translate }}: {{card.createdAt}}</span>
+                </mat-card-header>
+                <mat-divider></mat-divider>
+                <div class="product-card-content">
+                  <img class="mat-image"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAKlBMVEXg4OD////j4+Pb29v7+/vi4uLx8fHs7Oz39/f09PTa2tru7u7m5ubX19cF3ejnAAABRElEQVR4nO3Z27JDMBiAURFVVN//dXfp+ZC6Y0//tS4zphPflARVBQAAAAAAAAAAAAAAAAAAAAAAAADAj6i/23p6G+jSkn7rKa6tXUyS0mHrSa4rp9QuHNKlJq8yl//i1GS/cEgbtsm4Kx0StEme7ipd4ZCgTQ7zrbT7fOoxm+TL+vL58ondZLwPd/2tQ+wm99HTRu4WJWaTapyTtNdTz/Pe9holaJNcnxrsh+vYZbt/iRK0SVUdj8fnf8k9StgmDyMPD4VzlNBN5qU4Pz0nT1EiN2mmdSe/vDroQzdppsX4NUlKOXCT5ry9f3t3ErhJU3qfFLdJMUncJuUkYZvkchJNNJlo8u58P6l3JXXoPVtRxCZ9PX5Tx/u+4zvgu2H5e3E7LP/MbxmWLowhXBIAAAAAAAAAAAAAAAAAAAAAAAAAgF/1BxZSCIBLTls7AAAAAElFTkSuQmCC">
+                  <mat-card-content>
+                    <div class="mat-card-content-description">
+                      <ul class="product-info-listing">
+                        <li><span class="product-title">{{card.title}}</span></li>
+                        <li><span class="price">{{ 'PRODUCTS.PRICE' | translate }}: {{card.price}}</span></li>
+                        <li><span class="price">{{ 'PRODUCTS.STATUS' |translate }}: {{card.status}}</span></li>
+                        <li><span class="price">{{ 'PROFILEPRODUCTOVERVIEW.PRODUCTNAME' | translate }}:
+                            {{card.productname}}</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </mat-card-content>
+                </div>
+                <div class="product-card-content">
+                  <mat-card-content>
+                    <div class="mat-card-content-action">
+                      <ul class="product-action-listing">
+                        <li><button
+                            [disabled]="(userRole=='Staff' && (card.signed==true||card.adminsigned==false)) || (userRole=='Admin' && card.adminsigned==true) || card.status == 'cancelled'"
+                            (click)="confirmOrder(card._id)" mat-raised-button color="primary" class="product-buy">
+                            {{ 'PROFILEPRODUCTOVERVIEW.CONFIRMORDER' | translate }}
+                          </button></li>
+                      </ul>
+                      <ul class="product-info-listing">
+                        <li class="sign"><span>{{ 'PROFILEPRODUCTOVERVIEW.ADMINSIGNED' | translate }}
+                            <mat-icon class="done-icon" *ngIf="card.adminsigned==true">done</mat-icon>
+                            <mat-icon class="clear-icon" *ngIf="card.adminsigned!=true">clear</mat-icon>
+                          </span>
+                        </li>
+                        <li class="sign"><span>{{ 'PROFILEPRODUCTOVERVIEW.STAFFSIGNED' | translate }}
+                            <mat-icon class="done-icon" *ngIf="card.signed==true">done</mat-icon>
+                            <mat-icon class="clear-icon" *ngIf="card.signed!=true">clear</mat-icon>
+                          </span></li>
+                      </ul>
+
+                    </div>
+                  </mat-card-content>
+                </div>
+              </mat-card>
+            </li>
+          </ul>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </div>
+</div>

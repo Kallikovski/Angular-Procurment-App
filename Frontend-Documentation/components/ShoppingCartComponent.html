@@ -1,0 +1,910 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Procurement App Frontend Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Procurement App Frontend Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  ShoppingCartComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/content/shopping-cart/shopping-cart.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Shopping cart page connects the UI to the shopping cart service</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-shopping-cart</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./shopping-cart.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./shopping-cart.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isCustomer" >isCustomer</a>
+                            </li>
+                            <li>
+                                <a href="#items" >items</a>
+                            </li>
+                            <li>
+                                <a href="#sum" >sum</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#calculateSum" >calculateSum</a>
+                            </li>
+                            <li>
+                                <a href="#clearCart" >clearCart</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#orderItems" >orderItems</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_shoppingCartService: <a href="../injectables/ShoppingCartService.html" target="_self">ShoppingCartService</a>, _orderService: <a href="../injectables/OrderService.html" target="_self">OrderService</a>, _userService: <a href="../injectables/UserService.html" target="_self">UserService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/content/shopping-cart/shopping-cart.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_shoppingCartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ShoppingCartService.html" target="_self" >ShoppingCartService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_orderService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OrderService.html" target="_self" >OrderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateSum"></a>
+                    <span class="name">
+                        <span ><b>calculateSum</b></span>
+                        <a href="#calculateSum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>calculateSum()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/components/content/shopping-cart/shopping-cart.component.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Calculates the sum of the product prices</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clearCart"></a>
+                    <span class="name">
+                        <span ><b>clearCart</b></span>
+                        <a href="#clearCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clearCart()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/components/content/shopping-cart/shopping-cart.component.ts:62</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Clears the shopping cart</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">src/app/components/content/shopping-cart/shopping-cart.component.ts:35</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="orderItems"></a>
+                    <span class="name">
+                        <span ><b>orderItems</b></span>
+                        <a href="#orderItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>orderItems()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/components/content/shopping-cart/shopping-cart.component.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Orders the products</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isCustomer"></a>
+                    <span class="name">
+                        <span ><b>isCustomer</b></span>
+                        <a href="#isCustomer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/content/shopping-cart/shopping-cart.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="items"></a>
+                    <span class="name">
+                        <span ><b>items</b></span>
+                        <a href="#items"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/content/shopping-cart/shopping-cart.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sum"></a>
+                    <span class="name">
+                        <span ><b>sum</b></span>
+                        <a href="#sum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/content/shopping-cart/shopping-cart.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { ShoppingCartService } from &#x27;src/app/shopping-cart/shopping-cart.service&#x27;;
+import { OrderService } from &#x27;src/app/order/order.service&#x27;;
+import { UserService } from &#x27;src/app/user/user.service&#x27;;
+
+/** Shopping cart page connects the UI to the shopping cart service */
+@Component({
+  selector: &#x27;app-shopping-cart&#x27;,
+  templateUrl: &#x27;./shopping-cart.component.html&#x27;,
+  styleUrls: [&#x27;./shopping-cart.component.scss&#x27;]
+})
+export class ShoppingCartComponent implements OnInit {
+
+  items: any[] &#x3D; [];
+  sum: number &#x3D; 0;
+  isCustomer &#x3D; false;
+
+
+
+  constructor(private _shoppingCartService: ShoppingCartService, private _orderService: OrderService, private _userService: UserService) {
+    this.items &#x3D; _shoppingCartService.getShoppingCart();
+    this.sum &#x3D; this.calculateSum()
+    _userService.getUser().subscribe(
+      res &#x3D;&gt; {
+        if (res.role &#x3D;&#x3D; &quot;Customer&quot;) {
+          this.isCustomer &#x3D; true;
+        }
+      },
+      err &#x3D;&gt; {
+        console.log(err);
+      }
+    )
+  }
+
+  ngOnInit(): void {
+  }
+
+  /** Calculates the sum of the product prices */
+  calculateSum() {
+    let sum: number &#x3D; 0;
+    this.items.forEach(item &#x3D;&gt; {
+      sum +&#x3D; item.price
+    });
+    return sum;
+  }
+
+  /** Orders the products */
+  orderItems() {
+    this._orderService.orderItems().subscribe({
+      next: (res: any) &#x3D;&gt; {
+        console.log(res)
+        this._shoppingCartService.clearShoppingCart();
+        this.items &#x3D; this._shoppingCartService.getShoppingCart();
+        this.sum &#x3D; 0;
+      }, error(msg) {
+        console.log(msg);
+      }
+    });
+  }
+
+  /** Clears the shopping cart */
+  clearCart() {
+    this._shoppingCartService.clearShoppingCart();
+    this.items &#x3D; this._shoppingCartService.getShoppingCart();
+    this.sum &#x3D; this.calculateSum()
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;div class&#x3D;&quot;container-content&quot;&gt;
+        &lt;mat-selection-list&gt;
+            &lt;mat-card class&#x3D;&quot;table-header&quot;&gt;
+                &lt;div class&#x3D;&quot;product-info header&quot;&gt;
+                    &lt;div class&#x3D;&quot;product-info-text&quot;&gt;
+                        &lt;h1&gt;{{ &#x27;SHOPPINGCARD.ARTICLE&#x27; | translate }}&lt;/h1&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;product-metrics header&quot;&gt;
+                    &lt;!-- &lt;h1&gt;{{ &#x27;SHOPPINGCARD.QUANTITY&#x27; | translate }}&lt;/h1&gt; --&gt;
+                    &lt;h1&gt;{{ &#x27;SHOPPINGCARD.PRICE&#x27; | translate }}&lt;/h1&gt;
+                    &lt;!-- &lt;h1&gt;{{ &#x27;SHOPPINGCARD.SUM&#x27; | translate }}&lt;/h1&gt; --&gt;
+                &lt;/div&gt;
+            &lt;/mat-card&gt;
+            &lt;mat-list *ngFor&#x3D;&quot;let item of items; let i &#x3D; index&quot; class&#x3D;&quot;product&quot;&gt;
+                &lt;mat-card&gt;
+                    &lt;div class&#x3D;&quot;product-info&quot;&gt;
+                        &lt;img class&#x3D;&quot;mat-image&quot; src&#x3D;&quot;https://material.angular.io/assets/img/examples/shiba2.jpg&quot;
+                            alt&#x3D;&quot;Photo of a Shiba Inu&quot;&gt;
+                        &lt;div class&#x3D;&quot;product-info-text&quot;&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;{{item.productname}}&lt;/li&gt;
+                                &lt;li&gt;{{ &#x27;SHOPPINGCARD.ITEMNUMBER&#x27; | translate }}: {{item._id}}&lt;/li&gt;
+                            &lt;/ul&gt;
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;product-metrics header&quot;&gt;
+                        &lt;h1&gt;{{item.price}} €&lt;/h1&gt;
+                    &lt;/div&gt;
+                &lt;/mat-card&gt;
+                &lt;mat-divider&gt;&lt;/mat-divider&gt;
+            &lt;/mat-list&gt;
+            &lt;mat-card *ngIf&#x3D;&quot;items.length &#x3D;&#x3D;&#x3D; 0&quot; class&#x3D;&quot;table-result&quot; color&#x3D;&quot;primary&quot;&gt;
+                &lt;div class&#x3D;&quot;product-metrics result&quot;&gt;
+                    &lt;div class&#x3D;&quot;result-values empty&quot;&gt;
+                        &lt;h2&gt;{{ &#x27;CART.NOPRODUCTS&#x27; | translate }}&lt;/h2&gt;
+                        &lt;mat-divider&gt;&lt;/mat-divider&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/mat-card&gt;
+            &lt;mat-card class&#x3D;&quot;table-result&quot; color&#x3D;&quot;primary&quot;&gt;
+                &lt;div class&#x3D;&quot;product-metrics result&quot;&gt;
+                    &lt;div class&#x3D;&quot;result-descriptions&quot;&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;{{ &#x27;SHOPPINGCARD.SUM&#x27; | translate }}&lt;/li&gt;
+                            &lt;li&gt;&lt;button (click)&#x3D;&quot;clearCart()&quot; mat-raised-button color&#x3D;&quot;warn&quot;
+                                    [disabled]&#x3D;&quot;items.length &#x3D;&#x3D;&#x3D; 0&quot;&gt;{{ &#x27;CART.CLEAR&#x27; | translate }}&lt;/button&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;result-values&quot;&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;{{sum}} €&lt;/li&gt;
+                            &lt;li&gt;&lt;button (click)&#x3D;&quot;orderItems()&quot; mat-raised-button color&#x3D;&quot;primary&quot;
+                                    [disabled]&#x3D;&quot;items.length &#x3D;&#x3D;&#x3D; 0 || isCustomer &#x3D;&#x3D; false&quot;&gt;{{ &#x27;CART.ORDER&#x27; | translate }}&lt;/button&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/mat-card&gt;
+            &lt;mat-card *ngIf&#x3D;&quot;isCustomer &#x3D;&#x3D; false&quot; class&#x3D;&quot;table-result&quot; color&#x3D;&quot;primary&quot;&gt;
+                &lt;div class&#x3D;&quot;product-metrics result&quot;&gt;
+                    &lt;div class&#x3D;&quot;result-values empty&quot;&gt;
+                        &lt;h2&gt;{{ &#x27;LOGIN.WARNING&#x27; | translate }}&lt;/h2&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/mat-card&gt;
+        &lt;/mat-selection-list&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./shopping-cart.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.container{
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .mat-card{
+        box-shadow: none;
+        display: flex;
+        flex-direction: row;
+        .product-info,.product-metrics{
+            width: 50%;
+            display: flex;
+            button{
+                margin-top: 16px;
+            }
+            h1{
+                text-align: end;
+            }
+            ul{
+                list-style: none;
+            }
+            &amp;.header,&amp;.result{
+                justify-content: space-between;
+            }
+            &amp;.result{
+                width: 100%;
+                .result-values{
+                    text-align: right;
+                    &amp;.empty{
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+                ul{
+                    padding: 0;
+                }
+            }
+            .mat-form-field{
+                max-width: 90px;
+            }
+        }
+        .product-metrics.header{
+            justify-content: end;
+        }
+    }
+    .table-header,.table-result{
+        flex-direction: row;
+        .result-descriptions{
+            width: 25%;
+        }
+        .result-values{
+            width: 25%;
+        }
+    }
+    .mat-image{
+        max-height: 100%;
+        max-width: 90px;
+        display: block;
+        object-fit: cover;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .container{
+        max-width: 960px;
+    }
+}
+@media only screen and (max-width: 1092px) {
+    .container{
+        max-width: 720px;
+        .product{
+            margin: 15px;
+        }
+        .product-info.header{
+            margin: 0 15px;
+            -webkit-tap-highlight-color: transparent;
+        }
+    }
+}
+@media only screen and (max-width: 868px) {
+    .container{
+        max-width: 540px;
+        .mat-card{
+            padding: 2px;
+            flex-direction: column;
+            .mat-image{
+                width: 120px;
+                margin: 0 auto auto 8px;
+            }
+            .product-info,.product-metrics{
+                width: 100%;
+                .product-info-text{
+                    width: 100%;
+                }
+            }
+            .product-metrics{
+                ul{
+                    padding: 0;
+                }
+                .result-descriptions,.result-values{
+                    padding: 0 8px;
+                }
+                h1{
+                    width: 50%;
+                }
+                form + h1{
+                    padding-left: 40px;
+                }
+                  
+            }
+        }
+        .table-result{
+            .result-placeholder{
+                width: 0%;
+            }
+            .result-descriptions{
+                width: 50%;
+            }
+            .result-values{
+                width: 50%;
+            }
+        }
+        .table-header{
+            display: none;
+        }
+        .product-card{
+            margin: 0;
+        }
+    }
+}
+@media only screen and (max-width: 676px) {
+    .container{
+        padding: 0;
+    }
+    .container-content{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container">    <div class="container-content">        <mat-selection-list>            <mat-card class="table-header">                <div class="product-info header">                    <div class="product-info-text">                        <h1>{{ \'SHOPPINGCARD.ARTICLE\' | translate }}</h1>                    </div>                </div>                <div class="product-metrics header">                    <!-- <h1>{{ \'SHOPPINGCARD.QUANTITY\' | translate }}</h1> -->                    <h1>{{ \'SHOPPINGCARD.PRICE\' | translate }}</h1>                    <!-- <h1>{{ \'SHOPPINGCARD.SUM\' | translate }}</h1> -->                </div>            </mat-card>            <mat-list *ngFor="let item of items; let i = index" class="product">                <mat-card>                    <div class="product-info">                        <img class="mat-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg"                            alt="Photo of a Shiba Inu">                        <div class="product-info-text">                            <ul>                                <li>{{item.productname}}</li>                                <li>{{ \'SHOPPINGCARD.ITEMNUMBER\' | translate }}: {{item._id}}</li>                            </ul>                        </div>                    </div>                    <div class="product-metrics header">                        <h1>{{item.price}} €</h1>                    </div>                </mat-card>                <mat-divider></mat-divider>            </mat-list>            <mat-card *ngIf="items.length === 0" class="table-result" color="primary">                <div class="product-metrics result">                    <div class="result-values empty">                        <h2>{{ \'CART.NOPRODUCTS\' | translate }}</h2>                        <mat-divider></mat-divider>                    </div>                </div>            </mat-card>            <mat-card class="table-result" color="primary">                <div class="product-metrics result">                    <div class="result-descriptions">                        <ul>                            <li>{{ \'SHOPPINGCARD.SUM\' | translate }}</li>                            <li><button (click)="clearCart()" mat-raised-button color="warn"                                    [disabled]="items.length === 0">{{ \'CART.CLEAR\' | translate }}</button></li>                        </ul>                    </div>                    <div class="result-values">                        <ul>                            <li>{{sum}} €</li>                            <li><button (click)="orderItems()" mat-raised-button color="primary"                                    [disabled]="items.length === 0 || isCustomer == false">{{ \'CART.ORDER\' | translate }}</button></li>                        </ul>                    </div>                </div>            </mat-card>            <mat-card *ngIf="isCustomer == false" class="table-result" color="primary">                <div class="product-metrics result">                    <div class="result-values empty">                        <h2>{{ \'LOGIN.WARNING\' | translate }}</h2>                    </div>                </div>            </mat-card>        </mat-selection-list>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'DataPrivacyComponent', 'selector': 'app-data-privacy'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LegalNoticeComponent', 'selector': 'app-legal-notice'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ProductConfirmationDialogComponent', 'selector': 'app-product-confirmation-dialog'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'ProfileProductDialogComponent', 'selector': 'app-profile-product-dialog'},{'name': 'ProfileProductOverviewComponent', 'selector': 'app-profile-product-overview'},{'name': 'ShoppingCartComponent', 'selector': 'app-shopping-cart'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ShoppingCartComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ShoppingCartComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

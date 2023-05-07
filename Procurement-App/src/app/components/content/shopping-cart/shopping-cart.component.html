@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="container-content">
+        <mat-selection-list>
+            <mat-card class="table-header">
+                <div class="product-info header">
+                    <div class="product-info-text">
+                        <h1>{{ 'SHOPPINGCARD.ARTICLE' | translate }}</h1>
+                    </div>
+                </div>
+                <div class="product-metrics header">
+                    <!-- <h1>{{ 'SHOPPINGCARD.QUANTITY' | translate }}</h1> -->
+                    <h1>{{ 'SHOPPINGCARD.PRICE' | translate }}</h1>
+                    <!-- <h1>{{ 'SHOPPINGCARD.SUM' | translate }}</h1> -->
+                </div>
+            </mat-card>
+            <mat-list *ngFor="let item of items; let i = index" class="product">
+                <mat-card>
+                    <div class="product-info">
+                        <img class="mat-image"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAKlBMVEXg4OD////j4+Pb29v7+/vi4uLx8fHs7Oz39/f09PTa2tru7u7m5ubX19cF3ejnAAABRElEQVR4nO3Z27JDMBiAURFVVN//dXfp+ZC6Y0//tS4zphPflARVBQAAAAAAAAAAAAAAAAAAAAAAAADAj6i/23p6G+jSkn7rKa6tXUyS0mHrSa4rp9QuHNKlJq8yl//i1GS/cEgbtsm4Kx0StEme7ipd4ZCgTQ7zrbT7fOoxm+TL+vL58ondZLwPd/2tQ+wm99HTRu4WJWaTapyTtNdTz/Pe9holaJNcnxrsh+vYZbt/iRK0SVUdj8fnf8k9StgmDyMPD4VzlNBN5qU4Pz0nT1EiN2mmdSe/vDroQzdppsX4NUlKOXCT5ry9f3t3ErhJU3qfFLdJMUncJuUkYZvkchJNNJlo8u58P6l3JXXoPVtRxCZ9PX5Tx/u+4zvgu2H5e3E7LP/MbxmWLowhXBIAAAAAAAAAAAAAAAAAAAAAAAAAgF/1BxZSCIBLTls7AAAAAElFTkSuQmCC">
+                        <div class="product-info-text">
+                            <ul>
+                                <li>{{item.productname}}</li>
+                                <li>{{ 'SHOPPINGCARD.ITEMNUMBER' | translate }}: {{item._id}}</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="product-metrics header">
+                        <h1>{{item.price}} €</h1>
+                    </div>
+                </mat-card>
+                <mat-divider></mat-divider>
+            </mat-list>
+            <mat-card *ngIf="items.length === 0" class="table-result" color="primary">
+                <div class="product-metrics result">
+                    <div class="result-values empty">
+                        <h2>{{ 'CART.NOPRODUCTS' | translate }}</h2>
+                        <mat-divider></mat-divider>
+                    </div>
+                </div>
+            </mat-card>
+            <mat-card class="table-result" color="primary">
+                <div class="product-metrics result">
+                    <div class="result-descriptions">
+                        <ul>
+                            <li>{{ 'SHOPPINGCARD.SUM' | translate }}</li>
+                            <li><button (click)="clearCart()" mat-raised-button color="warn"
+                                    [disabled]="items.length === 0">{{ 'CART.CLEAR' | translate }}</button></li>
+                        </ul>
+                    </div>
+                    <div class="result-values">
+                        <ul>
+                            <li>{{sum}} €</li>
+                            <li><button (click)="orderItems()" mat-raised-button color="primary"
+                                    [disabled]="items.length === 0 || isCustomer == false">{{ 'CART.ORDER' | translate
+                                    }}</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </mat-card>
+            <mat-card *ngIf="isCustomer == false" class="table-result" color="primary">
+                <div class="product-metrics result">
+                    <div class="result-values empty">
+                        <h2>{{ 'LOGIN.WARNING' | translate }}</h2>
+                    </div>
+                </div>
+            </mat-card>
+        </mat-selection-list>
+    </div>
+</div>

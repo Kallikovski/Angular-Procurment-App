@@ -1,0 +1,78 @@
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.product-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+.product{
+    width: 50%;
+    list-style: none;
+    &.filter{
+        width: 100%;
+    }
+    .product-card{
+        margin: 15px;
+        .price,.product-title{
+            display: inline;
+        }
+        .price{
+            float: right;
+        }
+        .search-form{
+            display: inline;
+        }
+        .search-bar{
+            float: right;
+            width: 50%;
+            min-width: 150px;
+            max-width: 250px;
+        }
+        ::ng-deep .mat-form-field-infix{
+            border: none;
+        }
+    }
+    p{
+        word-break: break-word;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .container{
+        max-width: 960px;
+    }
+}
+@media only screen and (max-width: 1092px) {
+    .container{
+        max-width: 720px;
+        .product{
+            width: 100%;
+            margin: 15px;
+        }
+    }
+}
+@media only screen and (max-width: 868px) {
+    .container{
+        max-width: 540px;
+    }
+}
+@media only screen and (max-width: 676px) {
+    .container{
+        padding: 0;
+    }
+    .container-content{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

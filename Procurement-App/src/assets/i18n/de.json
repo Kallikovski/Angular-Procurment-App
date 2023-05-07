@@ -1,0 +1,111 @@
+{
+    "PROFILE": {
+        "MYPROFILE": "Mein Profil",
+        "MYPRODUCTS": "Mein Produkt",
+        "LOGOUT": "Ausloggen"
+    },
+    "LOGIN": {
+        "EMAIL": "E-Mail",
+        "PASSWORD": "Passwort",
+        "LOGIN": "Einloggen",
+        "EMAILWARNING": "Bitte geben Sie eine gültige E-Mail Adresse an",
+        "PASSWORDWARNING": "Bitte geben Sie ein gültiges Passwort ein",
+        "REGISTRATION": "Registrieren",
+        "WARNING": "Bitte als Käufer einloggen!"
+    },
+    "FILTER": {
+        "NAME": "Produktname",
+        "PRICE": "Preis",
+        "ORDERINGDATE": "Bestelldatum",
+        "STATUS": "Status"
+    },
+    "CART": {
+        "NOPRODUCTS": "Keine Produkte in ihrem Warenkorb",
+        "ORDER": "Bestellen",
+        "CLEAR": "Einkaufswagen leeren"
+    },
+    "HOME": {
+        "SEARCHBAR": "Suchen"
+    },
+    "MYPRODUCTS": {
+        "ORDEREDPRODUCTS": "bestellte Produkte",
+        "PRODUCTHISTORY": "Produkthistorie",
+        "PRODUCTMANAGEMENT": "Produktverwaltung"
+    },
+    "PRODUCTS": {
+        "PRODUCTVIEW":"Produkt ansehen",
+        "PRICE": "Preis",
+        "BUY":"Kaufen",
+        "CANCEL": "Abbrechen",
+        "ORDERINGDATE": "Bestelldatum",
+        "CREATED": "Erstelldatum",
+        "STATUS": "Status",
+        "STATUSSHIPPED": "versandt",
+        "DATEOFARRIVAL": "Ankunftsdatum",
+        "BUYAGAIN": "Nochmal kaufen"
+    },
+    "MYPROFILE": {
+        "PERSONALDATA": "Persönliche Daten",
+        "NAME": "Name",
+        "POSTCODE": "Postleitzahl",
+        "CITY": "Stadt",
+        "STREET": "Straße",
+        "EMAIL": "E-Mail",
+        "ROLE": "Rolle",
+        "EDITPROFILE": "Profil bearbeiten",
+        "CHANGEPASSWORD": "Passwort ändern",
+        "CUSTOMER": "Käufer",
+        "ADMIN": "Admin",
+        "STAFF": "Angestellter"
+    },
+    "SHOPPINGCARD": {
+        "ARTICLE": "Artikel",
+        "QUANTITY": "Anzahl",
+        "PRICE": "Preis",
+        "SUM": "Summe",
+        "ITEMNUMBER": "Artikel-Nr.",
+        "TAX": "Mehrwertsteuer",
+        "DELIVERYCHARGES": "Versandgebühr"
+    },
+    "PROFILEPRODUCTOVERVIEW": {
+        "ORDERCODE": "Bestellnummer",
+        "FINISHORDER": "Bestellung abschließen",
+        "CANCELORDER": "Bestellung abbrechen",
+        "CONFIRMORDER": "Bestellung bestätigen",
+        "ADMINSIGNED": "Vom Admin signiert",
+        "STAFFSIGNED": "Vom Mitarbeiter signiert",
+        "PRODUCTNAME": "Produktname",
+        "PRICE": "Preis",
+        "DESCRIPTION": "Beschreibung",
+        "LASTUPDATED": "Letzte Änderung"
+    },
+    "PROFILEPRODUCTDIALOG": {
+        "CREATE": "Erstellen",
+        "UPDATE": "Aktualisieren",
+        "CANCEL": "Abbrechen",
+        "PRODUCTNAME": "Produktname",
+        "PRICE": "Preis",
+        "DESCRIPTION": "Beschreibung"
+    },
+    "PRODUCTCONFIRMATIONDIALOG": {
+        "AREUSURE": "Sind Sie sicher?",
+        "CONFIRM": "Bestätigen",
+        "CANCEL": "Abbrechen",
+        "ORDEREDPRODUCTS": "Bestellte Produkte",
+        "PRODUCTMANAGEMENT": "Produktmanagement",
+        "ORDERMANAGEMENT": "Bestellungsmanagement"
+    },
+    "CHAT": {
+        "WRITEHERE": "Hier schreiben ..."
+    },
+    "FOOTER": {
+        "LEGALNOTICE":"Impressum",
+        "DATAPRIVACY":"Datenschutz"
+    },
+    "LEGALNOTICE": {
+        "CONTENT": "<h1 class=\"headline\">Rechtliche Hinweise</h1>\n<p>THD - Technische Hochschule Deggendorf<\/p>\n<p> DIT - Institut für Technologie<\/p>\n<p> Dieter-Görlitz-Platz 1<\/p>\n<p> 94469 Deggendorf<\/p>\n<p> Deutschland<\/p>\n\n<h1>Kontakt<\/h1>\n<p>Wenn Sie Fragen zu diesem Haftungsausschluss haben, können Sie uns kontaktieren:<\/p>\n<ul><li><p>Per E-Mail: office@mycompany.com<\/p><\/li><li><p>Per Telefon: 408.996.1010<\/p></li><li><p>Per Fax: 408.996.101 234<\/p><\/li><\/ul>\n<h1>Urheberrecht<\/h1>\n<p>Die gesamte Website unterliegt dem deutschen Urheberrecht. Inhalte Dritter sind als solche gekennzeichnet. Solltewir versehentlich das Urheberrecht Dritter verletzen, bitten wir um einen entsprechenden Hinweis. Wir werden die betroffenenInhalte so schnell wie möglich prüfen und gegebenenfalls entfernen.<\/p>\n<h1>Cookies<\/h1>\n<p>Diese Website verwendet so genannte Cookies, die auf Ihrem Computer gespeichert werden. Sie haben jederzeit die Möglichkeit das Setzen von Cookies zu unterbinden oder bereits gesetzte Cookies zu löschen. Die entsprechenden Optionen finden Sie in denden Einstellungen Ihres Webbrowsers.<\/p>\n<h1>Sitzungs-Cookie<\/h1>\n<p>Das Session-Cookie besteht nur für die Dauer einer Sitzung, d.h. bis zum Schließen des Webbrowsers. Es wirdwird für die Login-Funktion benötigt. Für den normalen Besucher hat es keine Bedeutung.<\/p>\n<h1>Cookie für die Sprachauswahl<\/h1>\n<p>Dieses Cookie speichert die gewählte Sprache. Auch dieses Cookie wird am Ende der Sitzung gelöscht.<\/p>"
+    },
+    "DATA PRIVACY": {
+        "CONTENT":  "<h1 class=\"headline\">Datenschutzbestimmungen</h1>\n<h1>Haftungsausschluss</h1>\n<p>Zuletzt aktualisiert: 17. November 2021</p>\n<h1>Auslegung und Definitionen</h1>\n<h2>Auslegung</h2>\n<p>Wörter, deren Anfangsbuchstaben groß geschrieben werden, haben die in den folgenden Begriffen definierte Bedeutung.Die nachstehenden Definitionen haben sowohl im Singular als auch im Plural dieselbe Bedeutung.</p>\n<h2>Begriffsbestimmungen</h2>\n<p>Für die Zwecke dieses Haftungsausschlusses:</p>\n<ul><li><strong>Unternehmen</strong> (in diesem Haftungsausschluss entweder als &quot;das Unternehmen&quot;, &quot;wir&quot;, &quot;uns&quot; oder &quot;unser&quot; bezeichnet) bezieht sich auf Procurement App.</li>\n<li><strong>Service</strong> bezieht sich auf die Website.</li>\n<li><strong>Sie</strong> bezieht sich auf die Person, die auf den Dienst zugreift, bzw. auf das Unternehmen oder eine andere juristische Person, in deren Namen eine solche Person auf den Dienst zugreift oder ihn nutzt.</li>\n<li><strong>Website</strong> bezieht sich auf die Procurement App, die über <a href=\"http://localhost:4200/\" rel=\"external nofollow noopener\" target=\"_blank\">http://localhost:4200/</a> zugänglich ist.</li>\n</ul>\n<h1>Haftungsausschluss</h1>\n<p>Die in dem Dienst enthaltenen Informationen dienen nur zu allgemeinen Informationszwecken.</p>\n<p>Das Unternehmen übernimmt keine Verantwortung für etwaige Fehler oder Auslassungen im Inhalt des Dienstes.</p>\n<p>In keinem Fall haftet das Unternehmen für besondere, direkte, indirekte oder zufällige Schäden oder Nachteile jeglicher Art, sei es durch Vertrag, Fahrlässigkeit oder andere unerlaubte Handlungen, die sich aus oder in Verbindung mit der Nutzung des Dienstes oder der Inhalte des Dienstes ergeben. Das Unternehmen behält sich das Recht vor, den Inhalt des Dienstes jederzeit und ohne vorherige Ankündigung zu ergänzen, zu löschen oder zu ändern. Dieser Disclaimer wurde mit Hilfe des Disclaimer-Generators erstellt.</p>\n<p>Das Unternehmen garantiert nicht, dass der Dienst frei von Viren oder anderen schädlichen Komponenten ist.</p>\n<h1>Haftungsausschluss für externe Links</h1>\n<p>Der Dienst kann Links zu externen Websites enthalten, die nicht vom Unternehmen bereitgestellt oder gepflegt werden oder in irgendeiner Weise mit ihm verbunden sind.</p>\n<p>Bitte beachten Sie, dass das Unternehmen keine Garantie für die Richtigkeit, Relevanz, Aktualität oder Vollständigkeit der Informationen auf diesen externen Websites übernimmt.</p>\n<h1>Ausschluss von Fehlern und Auslassungen</h1>\n<p>Die im Rahmen des Dienstes bereitgestellten Informationen dienen lediglich der allgemeinen Orientierung in Bezug auf Themen von Interesse. Obwohl das Unternehmen alle Vorsichtsmaßnahmen ergreift, um sicherzustellen, dass der Inhalt des Dienstes sowohl aktuell als auch korrekt ist, können Fehler auftreten. Darüber hinaus kann es angesichts sich ändernder Gesetze, Regeln und Vorschriften zu Verzögerungen, Auslassungen oder Ungenauigkeiten bei den im Dienst enthaltenen Informationen kommen.</p>\n<p>Das Unternehmen ist nicht verantwortlich für Fehler oder Auslassungen oder für die Ergebnisse, die durch die Nutzung dieser Informationen erzielt werden.</p>\n<h1>Fair Use Disclaimer</h1>\n<p>Das Unternehmen kann urheberrechtlich geschütztes Material verwenden, das nicht immer ausdrücklich vom Urheberrechtsinhaber genehmigt wurde. Das Unternehmen stellt dieses Material zu Zwecken der Kritik, Kommentierung, Berichterstattung, Lehre, Wissenschaft oder Forschung zur Verfügung.</p>\n<p>Das Unternehmen ist der Ansicht, dass dies eine &quot;faire Nutzung&quot; des urheberrechtlich geschützten Materials gemäß Abschnitt 107 des U.S. Copyright Act darstellt.</p>\n<p>Wenn Sie urheberrechtlich geschütztes Material des Dienstes für Ihre eigenen Zwecke verwenden möchten, die über eine faire Nutzung hinausgehen, müssen Sie die Erlaubnis des Urheberrechtsinhabers einholen.</p>\n<h1>Haftungsausschluss für geäußerte Ansichten</h1>\n<p>Der Dienst kann Ansichten und Meinungen enthalten, die von den Autoren stammen und nicht notwendigerweise die offizielle Politik oder Position eines anderen Autors, einer Behörde, einer Organisation, eines Arbeitgebers oder eines Unternehmens, einschließlich des Unternehmens, wiedergeben.</p>\n<p>Kommentare, die von Nutzern gepostet werden, liegen in deren alleiniger Verantwortung, und die Nutzer übernehmen die volle Verantwortung, Haftung und Schuld für jegliche Diffamierung oder Rechtsstreitigkeiten, die sich aus dem in einem Kommentar Geschriebenen ergeben oder direkt daraus resultieren. Das Unternehmen haftet nicht für Kommentare, die von Nutzern gepostet werden, und behält sich das Recht vor, jeden Kommentar aus beliebigen Gründen zu löschen.</p>\n<h1>Ausschluss der Haftung</h1>\n<p>Die Informationen des Dienstes werden unter der Voraussetzung zur Verfügung gestellt, dass das Unternehmen keine rechtlichen, buchhalterischen, steuerlichen oder sonstigen professionellen Beratungen und Dienstleistungen anbietet. Daher sollten sie nicht als Ersatz für die Beratung durch professionelle Buchhaltungs-, Steuer-, Rechts- oder andere kompetente Berater verwendet werden.</p>\n<p>In keinem Fall haften das Unternehmen oder seine Lieferanten für besondere, zufällige, indirekte oder Folgeschäden.</p>"
+    }
+}
